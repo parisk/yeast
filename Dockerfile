@@ -12,7 +12,7 @@ RUN wget https://github.com/bcpierce00/unison/archive/v$UNISON_VERSION.tar.gz &&
     make
 
 RUN mkdir -p /usr/src/unison && \
-    cd unison-2.51.0/src && \
+    cd unison-$UNISON_VERSION/src && \
     cp -t /usr/src/unison unison unison-fsmonitor
 
 
