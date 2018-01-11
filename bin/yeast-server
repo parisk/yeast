@@ -1,0 +1,5 @@
+#! /bin/bash
+
+export UNISONLOCALHOSTNAME=yeast-server
+
+unison -socket 31415

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+export UNISONLOCALHOSTNAME=yeast-client
+
+unison . socket://yeast-server:31415 -silent -owner -group -times -perms -1 -prefer newer -repeat watch
