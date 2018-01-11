@@ -1,0 +1,32 @@
+version: 3.4
+
+services:
+  server:
+    image: paris/yeast:latest
+    command: yeast-server
+    volumes:
+      - ${YEAST_MOUNTPOINT:-/mnt/data}:/mnt/data
+    networks:
+      default:
+        aliases:
+          - yeast-server
+    deploy:
+      placement:
+        constraints:
+          - node.labels.yeast.role == server
+
+  client:
+    image: paris/yeast:latest
+    command: yeast-client
+    depends_on:
+      - server
+    volumes:
+      - ${YEAST_MOUNTPOINT:-/mnt/data}:/mnt/data
+    networks:
+      default:
+        aliases:
+          - yeast-client
+    deploy:
+      placement:
+        constraints:
+          - node.labels.yeast.role == client

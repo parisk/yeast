@@ -7,3 +7,9 @@
 ## Motivation
 
 ...
+
+## Deploying Yeast
+
+Deploying Yeast happens only on Docker with Swarm Mode enabled.
+
+...

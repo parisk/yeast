@@ -1,0 +1,5 @@
+#! /bin/bash
+
+export $(cat .env)
+
+docker stack deploy -c docker-compose.yml yeast

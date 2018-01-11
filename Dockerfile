@@ -22,4 +22,4 @@ VOLUME ["/mnt/data"]
 WORKDIR /mnt/data
 
 COPY --from=builder /usr/src/unison/* /usr/local/bin/
-COPY bin/* /usr/local/bin/
+COPY src/* /usr/local/bin/
