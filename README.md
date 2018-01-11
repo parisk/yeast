@@ -1,6 +1,6 @@
 # Yeast
 
-*Yeast* is a simple self-replicating directory across two hosts.
+*Yeast* provides simple self-replicating volumes across two hosts.
 
 ...
 
