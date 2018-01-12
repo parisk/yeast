@@ -35,4 +35,4 @@ networks:
   default:
     driver: overlay
     driver_opts:
-      encrypted: true
+      encrypted: 'true'
