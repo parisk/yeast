@@ -30,3 +30,9 @@ services:
       placement:
         constraints:
           - node.labels.yeast.role == client
+
+networks:
+  default:
+    driver: overlay
+    driver_opts:
+      encrypted: true
